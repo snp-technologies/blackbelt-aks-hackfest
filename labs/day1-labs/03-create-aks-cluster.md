@@ -110,3 +110,5 @@
 You should now have a Kubernetes cluster running with 2 nodes. You do not see the master servers for the cluster because these are managed by Microsoft. The Control Plane services which manage the Kubernetes cluster such as scheduling, API access, configuration data store and object controllers are all provided as services to the nodes. 
 
 12. In Azure portal, navigate to the Resource Group you created for the AKS cluster. See what resources were provisioned. Click on the **Kubernetes service** resource type. Familiarize yourself with the Overview blade and other blades that you can access from the tabs on the left, such as Activity log, Upgrade, Metrics, etc.
+
+The AKS resource provider automatically creates the second Resource Group  during deployment with a name like `MC_<myResourceGRoup>_<myAKSCluster>_<region>`. The second resource group contains all of the infrastructure resources associated with the cluster, such as VMs, networking, and storage. It is created to simplify resource cleanup.
